@@ -1,0 +1,42 @@
+#:kivy 1.10.1
+#:import math math
+# File name: HM.py
+
+ScreenManager:
+    id: screen_manager
+    MenuScreen:
+        id: MenuScreen
+        name: 'MenuScreen'
+        manager: 'screen_manager'
+    PlayGameScreen:
+        id: PlayGameScreen
+        name: 'PlayGameScreen'
+        manager: 'screen_manager'
+    SettingsScreen:
+        id: SettingsScreen
+        name: 'SettingsScreen'
+        manager: 'screen_manager'
+
+<MenuScreen>:
+    BoxLayout:
+        Button:
+            text: 'Goto settings'
+            on_press: app.root.current = 'SettingsScreen'
+        Button:
+            text: 'Start Game'
+            on_press: app.root.current = 'PlayGameScreen'
+        Button:
+            text: 'Quit'
+
+<SettingsScreen>:
+    BoxLayout:
+        Button:
+            text: 'My settings button'
+        Button:
+            text: 'Back to menu'
+            on_press: app.root.current = 'MenuScreen'
+
+<PlayGameScreen>:
+    BoxLayout:
+        Button:
+            text: 'Tady se ti zobrazí hra'

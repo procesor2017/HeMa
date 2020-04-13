@@ -1,7 +1,6 @@
 import csv
 import os
 import random
-from typing import TextIO
 
 
 class Champ():
@@ -115,4 +114,3 @@ class Champ():
 
 # champ = Champ()
 # champ.save_value_champ(champ.create_champ())
-
