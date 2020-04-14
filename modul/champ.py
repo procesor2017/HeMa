@@ -112,5 +112,8 @@ class Champ():
                     i += 1
                 f.write('\n')
 
+    def info_champ(self):
+        pass
+
 # champ = Champ()
 # champ.save_value_champ(champ.create_champ())
